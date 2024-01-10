@@ -11,6 +11,15 @@
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/style.css">
     
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
+
 </head>
 <body>
 
@@ -30,6 +39,32 @@
     <hr>
     <div class="skills">
       <h2>My Skills.</h2>
+
+      <!-- ... (your existing HTML content) ... -->
+
+    <div class="projects">
+      <h2>Projects.</h2>
+      <!-- Swiper Container -->
+      <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <!-- Project Cards -->
+              <div class="swiper-slide">
+                  <h3>Project Title 1</h3>
+                  <p>Description of Project 1.</p>
+              </div>
+              <div class="swiper-slide">
+                  <h3>Project Title 2</h3>
+                  <p>Description of Project 2.</p>
+              </div>
+              <!-- Add more swiper-slide divs for additional projects -->
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+<!-- ... (rest of your HTML content) ... -->
+
 
       </div>
       <div class="skill-row">
@@ -62,7 +97,7 @@
     <p class="copyright">© 2022 Maulik Patel</p>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.birds.min.js"></script>
         <script>
           VANTA.BIRDS({
@@ -80,6 +115,37 @@
             birdSize: 1.50,
             quantity: 4.00
           });
+</script> -->
+
+<!-- Swiper Initialization Script -->
+<script>
+  const swiper = new Swiper('.swiper-container', {
+      direction: 'horizontal',
+      loop: true,
+      pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+      },
+  });
+</script>
+
+<!-- VANTA.js Initialization Script -->
+<script>
+  VANTA.BIRDS({
+      el: "#vantajs",
+      /* more options (Uncomment) */
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 600.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundColor: 0xabf5db,
+      colorMode: "lerpGradient",
+      birdSize: 1.50,
+      quantity: 4.00
+  });
 </script>
 
 </body>
